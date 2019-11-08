@@ -1,0 +1,17 @@
+name: 'Filter Github Branch'
+description: 'Gets the branch that triggered action'
+author: 'Vinicius Luiz'
+
+branding:
+  icon: 'git-branch'
+  color: 'blue'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+outputs:
+  filtered_branch:
+    description: 'Github filtered branch'
+  branch_suffix:
+    description: 'Branch without prefix {bugfix|feature|release}'
